@@ -16,7 +16,7 @@
 
 !!!include(indexCircular.md)!!!
 
-> *No Output*
+> _No Output_
 
 :[](indexCircular.md)
 

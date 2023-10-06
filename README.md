@@ -15,8 +15,8 @@ The following 2 syntaxes are supported and can be used at anytime
 
 > **`!!!include(file.md)!!!`**
 
-* Output when referenced file is not found: *`File 'pathToFile/file.md' not found`*
-* Output for circular reference: *`Circular reference between 'pathToFile/file.md' and 'pathToParentFile/partent.md'`*
+- Output when referenced file is not found: _`File 'pathToFile/file.md' not found`_
+- Output for circular reference: _`Circular reference between 'pathToFile/file.md' and 'pathToParentFile/partent.md'`_
 
 ---
 
@@ -55,20 +55,19 @@ The following 2 syntaxes are supported and can be used at anytime
 
 > **`:[Alternative Text](file.md)`**
 
-* To include file name in output use: *`{{FILE}}`*\
+- To include file name in output use: _`{{FILE}}`_\
   E.g. **`:[Alternative Text for {{FILE}}](file.md)`**
 
 ![`:(file.md)`](examples/syntaxNotFound.png)
-
 
 ### Provide alternative text for circular reference
 
 > **`:[|Alternative Text](file.md)`**
 
-* To include file name in parent: *`{{PARENT}}`*\
+- To include file name in parent: _`{{PARENT}}`_\
   E.g. **`:[|Alternative Circular Text with {{PARENT}}](file.md)`**
 
-* To include file name in child use: *`{{FILE}}`*\
+- To include file name in child use: _`{{FILE}}`_\
   E.g. **`:[|Alternative Circular Text with {{FILE}}](file.md)`**
 
 ![`:(file.md)`](examples/syntaxCircularAlternative.png)
@@ -150,6 +149,7 @@ Bringing it all together
 
 ```markdown
 # Document Title
+
 :[includes/links.md]
 
 :[Chapter 1](chapter1.md)
@@ -183,5 +183,5 @@ This will produce the following output
 
 This Visual Studio Code Extension was inspired by
 
-* [**Markdown-It-Include**](https://github.com/camelaissani/markdown-it-include) plugin for [Markdown-It](https://github.com/markdown-it/markdown-it)
-* [**Transclusion conversation**](https://talk.commonmark.org/t/transclusion-or-including-sub-documents-for-reuse/270) in [CommonMark.org](https://commonmark.org/) forum
+- [**Markdown-It-Include**](https://github.com/camelaissani/markdown-it-include) plugin for [Markdown-It](https://github.com/markdown-it/markdown-it)
+- [**Transclusion conversation**](https://talk.commonmark.org/t/transclusion-or-including-sub-documents-for-reuse/270) in [CommonMark.org](https://commonmark.org/) forum

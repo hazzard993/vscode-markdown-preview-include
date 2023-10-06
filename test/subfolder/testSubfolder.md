@@ -1,1 +1,1 @@
-Test include of  `testSubfolder.md`
+Test include of `testSubfolder.md`

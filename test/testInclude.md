@@ -1,1 +1,1 @@
-Test include of  `testInclude.md`
+Test include of `testInclude.md`

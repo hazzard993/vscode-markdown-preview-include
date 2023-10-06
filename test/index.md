@@ -14,21 +14,21 @@
 
 ### Include 2x `testInclude.md`
 
-> Test include of  `testInclude.md`
+> Test include of `testInclude.md`
 
 :[Test Include](testInclude.md)
 
-> Test include of  `testInclude.md`
+> Test include of `testInclude.md`
 
 !!!include(testInclude.md)!!!
 
 ### Include 2x `subfolder/testSubfolder.md`
 
-> Test include of  `testSubfolder.md`
+> Test include of `testSubfolder.md`
 
 :[Test Include](subfolder/testSubfolder.md)
 
-> Test include of  `testSubfolder.md`
+> Test include of `testSubfolder.md`
 
 !!!include(subfolder/testSubfolder.md)!!!
 
@@ -74,7 +74,7 @@
 
 !!!include(testFileNotFound.md)!!!
 
->&nbsp;
+> &nbsp;
 
 :[](testFileNotFound.md)
 

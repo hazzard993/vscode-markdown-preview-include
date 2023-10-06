@@ -1,2 +1,2 @@
-Test include of  `testCircular.md`\
+Test include of `testCircular.md`\
 :(../indexCircular.md)

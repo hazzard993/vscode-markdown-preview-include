@@ -4,4 +4,4 @@
 
 **Showcase for provide an alternative text if file cannot be found**
 
- :[Topic Description](topic.md)
+:[Topic Description](topic.md)
