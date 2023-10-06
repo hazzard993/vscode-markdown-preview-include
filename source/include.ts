@@ -39,22 +39,29 @@ export = function Include(markdown: MarkdownIt, settings: IncludeSettings) {
 
         // Assembly child content
         let childContent: string
+        let error = false;
         if (fs.existsSync(childFile) === false) {
             // Child file does not exist
             childContent = notFoundMessage.replace('{{FILE}}', childFile)
+            error = true;
         } else if (processedFiles.indexOf(childFile) !== -1) {
             // Child file would be a circular reference
             childContent = circulareMessage.replace('{{FILE}}', childFile).replace('{{PARENT}}', parentFile as string)
+            error = true;
         } else {
             // Get child file content and process it
             childContent = fs.readFileSync(childFile, 'utf8')
             childContent = execute(childContent, childFile, processedFiles);
         }
 
+        const parentContentStart = parentContent.slice(0, regexResult.index);
+        let parentContentEnd = parentContent.slice(regexResult.index + regexResult[0].length, parentContent.length);
+        if (!error) {
+            parentContentEnd = parentContentEnd.replace(/^[\n\r]+/, "");
+        }
+
         // Execute replace
-        return parentContent.slice(0, regexResult.index)
-            + childContent
-            + parentContent.slice(regexResult.index + regexResult[0].length, parentContent.length);
+        return parentContentStart + childContent + parentContentEnd;
     }
 
     /** Execute including of child files (execute the transclusion) */
